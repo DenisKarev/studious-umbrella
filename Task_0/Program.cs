@@ -11,7 +11,7 @@ Console.Write("Enter an integer, plz: ");
 int numB = Convert.ToInt32(Console.ReadLine()); // from -2 147 483 648 to 2 147 483 648
 // double d = 4.454;
 Console.Write("Enter a long number, plz: ");
-int64 numL = Convert.ToInt64(Console.ReadLine());
+long numL = Convert.ToInt64(Console.ReadLine());
 // Console.Write("Sqr of your number is: ");
 Console.WriteLine($"Sqr of your int:{numB} is: {numB*numB}");
 Console.WriteLine($"Sqr of your long:{numL} is: {numL*numL}");
