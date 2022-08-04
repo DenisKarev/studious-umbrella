@@ -41,6 +41,6 @@ else
 }
 
 // DO NOT DO LIKE THIS
-string str = "12345";
-string res = str[0].ToString(); //1
-string res = str[1].ToString(); //2
+// string str = "12345";
+// string res = str[0].ToString(); //1
+// string res = str[1].ToString(); //2
