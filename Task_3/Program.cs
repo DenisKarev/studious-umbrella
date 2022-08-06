@@ -4,6 +4,7 @@
 //5 -> Пятница
 
 // week = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+
 string day_Str = " ";
 Console.Write("Enter numer of a day: ");
 int day_N = Convert.ToInt32(Console.ReadLine());
@@ -44,3 +45,14 @@ else
 // string str = "12345";
 // string res = str[0].ToString(); //1
 // string res = str[1].ToString(); //2
+
+// int a=1, b=2,c=3,d=8, e=4, max=a;
+
+// if (a>max) max=a;
+// if (b>max) max=b;
+// if (c>max) max=c;
+// if (d>max) max=d;
+// if (e>max) max=e;
+
+// Console.Write("max = ");
+// Console.WriteLine(max);
