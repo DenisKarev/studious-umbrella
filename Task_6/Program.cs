@@ -11,7 +11,7 @@ int numb = Convert.ToInt32(Console.ReadLine());
 int resu = numb % 2;
 
 if (resu == 0) Console.WriteLine($"Число: {numb} четное");
-else Console.WriteLine($"Число: {numb} нечетное");
+else Console.WriteLine($"Число: {numb} не четное");
 
-// Console.WriteLine(resu == 0 ? $"Число: {numb} четное" : $"Число: {numb} нечетное");
-// Console.WriteLine(numb % 2 == 0 ? $"Число: {numb} четное" : $"Число: {numb} нечетное");
+// Console.WriteLine(resu == 0 ? $"Число: {numb} четное" : $"Число: {numb} не четное");
+// Console.WriteLine(numb % 2 == 0 ? $"Число: {numb} четное" : $"Число: {numb} не четное");
