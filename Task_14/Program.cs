@@ -10,7 +10,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 bool CheckNumber (int num)
 {
-if (number % 7 == 0 && number % 23 == 0)return true;
+if (num % 7 == 0 && num % 23 == 0)return true;
 else return false;
 }
 
@@ -18,3 +18,8 @@ bool yes = CheckNumber (number);
 
 if (yes) Console.WriteLine("Да");
 else Console.WriteLine("Нет");
+
+// Console.WriteLine(yes ? "Да" : "Нет");   //  тернарное выражение??
+
+// if (CheckNumber(number)) Console.WriteLine("Да");
+// else Console.WriteLine("Нет");
