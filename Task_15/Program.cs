@@ -7,9 +7,10 @@
 Console.WriteLine("Введите число:");
 int n = Convert.ToInt32(Console.ReadLine());
 
-if (n >7 || n<1) Console.WriteLine("неправильное число");
+if (n > 7 || n < 1) Console.WriteLine("неправильное число");
 else if (n == 7 || n == 6) Console.WriteLine($"{n} -> Выходной");
 else Console.WriteLine($"{n} -> Рабочий");
 
+// Вариант
 // Читается тяжело, но это просто проба себя в тернарных выражениях :)
 // Console.WriteLine(n > 7 || n < 1 ? "неправильное число" : n == 7 || n == 6 ? $"{n} -> Выходной" : $"{n} -> Рабочий");
