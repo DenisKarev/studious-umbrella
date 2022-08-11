@@ -9,8 +9,19 @@
 // Console.WriteLine("Веедите число:");                 // Для ввода с консоли
 // int numb = Convert.ToInt32 (Console.ReadLine());
 
-int numb = 199;
-if (numb <100 && numb > -100) Console.WriteLine("третьей цифры нет");
-else Console.WriteLine($"{numb} -> {(numb / 100) % 10}");
+int numb = 238793199;
+if (numb < 100 && numb > -100) Console.WriteLine("третьей цифры нет");
+else
+{
+    int oper = numb;
+    // int ooper = numb;
+    while (oper > 1000)
+    {
+        oper = oper / 10;
+    }
+    
+    // int res = oper / 100;
+    Console.WriteLine($"{numb} -> {oper % 10}");
+}
 
 // Console.WriteLine(numb < 100 && numb > -100 ? $"третьей цифры нет" : $"{numb} -> {(numb / 100) % 10}");
