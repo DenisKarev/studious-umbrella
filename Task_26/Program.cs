@@ -17,7 +17,7 @@ int CounNumbers (int integer)
 
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int increm = 0;
+// int increm = 0;
 int tempI = CounNumbers(num);
 
 // for (increm = 0; tempI > 0; tempI /= 10)
