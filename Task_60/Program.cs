@@ -30,7 +30,7 @@ int[,,] CreateMatrix3DRndInt(int row, int col, int dep, int min, int max)
 }
 
 void PrintMatrix3D(int[,,] matrix)
-{
+{Console.WriteLine();
     for (int k = 0; k < matrix.GetLength(2); k++)
     {
         for (int i = 0; i < matrix.GetLength(0); i++)
@@ -58,10 +58,10 @@ bool CheckIntInMatrix3D(int[,,] matrix, int value)
     {
         for (int j = 0; j < col; j++)
         {
-            for (int k = j + 1; k < dep; k++)
+            for (int k = 0; k < dep; k++)
             {
                 if (matrix[i, j, k] == value){
-                    res = true;
+                    res = true; Console.Write(".");
                     break;
                 }
             }
@@ -70,6 +70,6 @@ bool CheckIntInMatrix3D(int[,,] matrix, int value)
     return res;
 }
 
-int[,,] matr3D = CreateMatrix3DRndInt(2, 2, 2, 10, 99);
+int[,,] matr3D = CreateMatrix3DRndInt(3, 3, 3, 10, 40);
 
 PrintMatrix3D(matr3D);
