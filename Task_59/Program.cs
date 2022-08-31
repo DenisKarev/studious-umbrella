@@ -62,24 +62,50 @@ int[] FindFirstMinElementIndexes(int[,] matrix)
 
 int[,] DeleteRowColByIndexes(int[,] matrix, int[] indexes)
 {
-    int[,] result = new int[matrix.GetLength(0) - 1, matrix.GetLength(1) - 1];
     int rowM = matrix.GetLength(0), colM = matrix.GetLength(1);
-    int row = 0, col = 0;
-    while (row < indexes[0])
+    int[,] result = new int[matrix.GetLength(0) - 1, matrix.GetLength(1) - 1];
+    int crossed = 0;
+    for (int i = 0; i < indexes[0]; i++)
     {
-        while (col < indexes[1])
+        for (int j = 0; j < indexes[1]; j++)
         {
-            result[row, col] = matrix[row, col];
-            col++;
+            result[i, j] = matrix[i, j];
         }
-        row++;
+    }
+    crossed = 1;
+    for (int i = 0; i < indexes[0]; i++)
+    {
+        for (int j = indexes[1] + crossed; j < colM; j++)
+        {
+            result[i, j - crossed] = matrix[i, j];
+        }
+    }    
+    for (int i = indexes[0] + crossed; i < rowM; i++)
+    {
+        for (int j = 0; j < indexes[1]; j++)
+        {
+            result[i - crossed, j] = matrix[i, j];
+        }
+    }    
+    for (int i = indexes[0] + crossed; i < rowM; i++)
+    {
+        for (int j = indexes[1] + crossed; j < colM; j++)
+        {
+            result[i-crossed, j-crossed] = matrix[i, j];
+        }
     }
     return result;
 }
 
-int[,] matr = new int[,] { { 1, 4, 7, 2 }, { 5, 9, 2, 3 }, { 8, 4, 2, 4 }, { 5, 2, 6, 7 }, };
+// int[,] matr = new int[,] { { 1, 4, 7, 2 }, { 5, 9, 2, 3 }, { 8, 4, 2, 4 }, { 5, 2, 6, 7 }, };
 
-// int[,] matr = CreateMatrixRndInt(3, 4, 1, 9);
+// int[,] matr = new int[,] {
+//      { 5, 4, 7, 4 },
+//      { 5, 9, 2, 3 },
+//      { 8, 4, 2, 4 },
+//      { 5, 2, 6, 7 }, };
+
+int[,] matr = CreateMatrixRndInt(4, 5, 1, 9);
 PrintMatrix(matr);
 Console.WriteLine();
 
